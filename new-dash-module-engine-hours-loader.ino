@@ -7,11 +7,11 @@ const uint8_t ENGINE_HOURS_DECIMAL_ADDRESS_LOW = 6;
 const uint8_t ENGINE_HOURS_DECIMAL_ADDRESS_HIGH = 25;//using 20 addresses for the decimal portion
 const uint8_t TOTAL_ADDRESS_COUNT = 20; //20 addresses
 
-const float engineRunTime = 2500; //THIS IS THE VALUE THAT WILL BE CHANGED. THIS REFLECTS THE TOTAL ENGINE RUNTIME. ONLY LIST TENTHS OF AN HOUR DUE TO FLOAT LIMIT
+const float engineRunTime = 2500.5; //THIS IS THE VALUE THAT WILL BE CHANGED. THIS REFLECTS THE TOTAL ENGINE RUNTIME. ONLY LIST TENTHS OF AN HOUR DUE TO FLOAT LIMIT
 const uint16_t engineRunTimeWholeNumber = (uint16_t)engineRunTime;
 
 void setup() {
-   COMMENTING OUT THE NORMAL CODE TO LOAD DEBUG VALUES TO EEPROM
+   
   Serial.begin(115200);
   EEPROM.update(ENGINE_HOURS_INTEGER_ADDRESS_0, (engineRunTimeWholeNumber >> 8) & 0xFF);//big endian. typecasting to uint16_t to drop decimal
   EEPROM.update(ENGINE_HOURS_INTEGER_ADDRESS_1, engineRunTimeWholeNumber & 0xFF);
