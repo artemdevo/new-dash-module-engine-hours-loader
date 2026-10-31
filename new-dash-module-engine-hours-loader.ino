@@ -7,7 +7,7 @@ const uint8_t ENGINE_HOURS_DECIMAL_ADDRESS_LOW = 6;
 const uint8_t ENGINE_HOURS_DECIMAL_ADDRESS_HIGH = 25;//using 20 addresses for the decimal portion
 const uint8_t TOTAL_ADDRESS_COUNT = 20; //20 addresses
 
-const float engineRunTime = 2500.5; //THIS IS THE VALUE THAT WILL BE CHANGED. THIS REFLECTS THE TOTAL ENGINE RUNTIME. ONLY LIST TENTHS OF AN HOUR DUE TO FLOAT LIMIT
+const float engineRunTime = 1920.2; //THIS IS THE VALUE THAT WILL BE CHANGED. THIS REFLECTS THE TOTAL ENGINE RUNTIME. ONLY LIST TENTHS OF AN HOUR DUE TO FLOAT LIMIT
 const uint16_t engineRunTimeWholeNumber = (uint16_t)engineRunTime;
 
 void setup() {
